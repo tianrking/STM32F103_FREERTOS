@@ -24,6 +24,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include "freertos.h"
+#include "task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -64,7 +66,15 @@ PUTCHAR_PROTOTYPE
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+static TaskHandle_t TaskHandle = NULL;
+void task(void *pvParameters){
+	
+	while(1){
+		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
+		HAL_Delay(100);
+		printf("Characters: %c %c\n", 'a', 65);
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -97,7 +107,13 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	xTaskCreate(task,
+								"Task",
+								128,
+								NULL,
+								4,
+								&TaskHandle);
+	vTaskStartScheduler();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -107,9 +123,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
-		HAL_Delay(100);
-		printf("Characters: %c %c\n", 'a', 65);
+//		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
+//		HAL_Delay(100);
+//		printf("Characters: %c %c\n", 'a', 65);
   }
   /* USER CODE END 3 */
 }
