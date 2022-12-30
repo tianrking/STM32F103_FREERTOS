@@ -1,0 +1,13 @@
+stm32f401ccu6\heap_4.o: FreeRTOS\Source\portable\MemMang\heap_4.c
+stm32f401ccu6\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/FreeRTOS.h
+stm32f401ccu6\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+stm32f401ccu6\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/FreeRTOSConfig.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/projdefs.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/portable.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/deprecated_definitions.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/mpu_wrappers.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/task.h
+stm32f401ccu6\heap_4.o: ./FreeRTOS/Source/include/list.h
