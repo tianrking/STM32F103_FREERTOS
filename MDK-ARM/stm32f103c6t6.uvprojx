@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103x6</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/CMSIS/Device/ST/STM32F1xx/Include;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Core/Inc;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/CMSIS/Device/ST/STM32F1xx/Include;C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/CMSIS/Include;.\FreeRTOS\Source\include;.\FreeRTOS\Source\portable\RVDS\ARM_CM0</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -502,6 +502,61 @@
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/system_stm32f1xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeRTOS/Source</GroupName>
+          <Files>
+            <File>
+              <FileName>croutine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\croutine.c</FilePath>
+            </File>
+            <File>
+              <FileName>event_groups.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\event_groups.c</FilePath>
+            </File>
+            <File>
+              <FileName>list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\list.c</FilePath>
+            </File>
+            <File>
+              <FileName>queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>stream_buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\stream_buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\tasks.c</FilePath>
+            </File>
+            <File>
+              <FileName>timers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\timers.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeRTOS/portable</GroupName>
+          <Files>
+            <File>
+              <FileName>port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\portable\RVDS\ARM_CM0\port.c</FilePath>
+            </File>
+            <File>
+              <FileName>heap_1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\FreeRTOS\Source\portable\MemMang\heap_1.c</FilePath>
             </File>
           </Files>
         </Group>
