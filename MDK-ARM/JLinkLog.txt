@@ -1,0 +1,37 @@
+T9E28 002:720.890   SEGGER J-Link V7.56b Log File
+T9E28 002:722.544   DLL Compiled: Oct 18 2021 16:30:47
+T9E28 002:722.551   Logging started @ 2023-01-02 07:45
+T9E28 002:722.556 - 2722.559ms
+T9E28 002:722.566 JLINK_SetWarnOutHandler(...)
+T9E28 002:722.573 - 0.009ms
+T9E28 002:722.579 JLINK_OpenEx(...)
+T9E28 002:726.133   
+  ***** Error: 
+T9E28 002:726.151   Cannot connect to J-Link.
+T9E28 002:728.723 - 6.153ms returns "Cannot connect to J-Link."
+T9E28 002:729.031 
+  ***** 
+T9E28 002:729.048 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T9E28 002:729.061 JLINK_GetHardwareVersion()
+T9E28 002:735.745 - 6.700ms
+T9E28 005:997.393 JLINK_IsOpen()
+T9E28 005:997.413 - 0.023ms returns 0x00
+T9E28 005:997.424 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T9E28 005:998.233 - 0.818ms returns 0xFFFFFFFF
+T9E28 005:998.248 JLINK_EnableLog(...)
+T9E28 005:998.255 - 0.009ms
+T9E28 005:998.262 JLINK_SetLogFile(...)
+T9E28 005:998.270 - 0.010ms
+T9E28 005:998.277 JLINK_SetWarnOutHandler(...)
+T9E28 005:998.282 - 0.008ms
+T9E28 005:998.289 JLINK_OpenEx(...)
+T9E28 006:004.942 - 6.664ms returns "Failed to open DLL"
+T9E28 006:005.221 
+  ***** 
+T9E28 006:005.238 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T9E28 006:005.248 JLINK_GetHardwareVersion()
+T9E28 006:010.710 - 5.470ms
+T9E28 007:105.904 JLINK_Close()
+T9E28 007:105.997 - 0.096ms
+T9E28 007:106.005   
+T9E28 007:106.010   Closed
