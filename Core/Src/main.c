@@ -66,15 +66,23 @@ PUTCHAR_PROTOTYPE
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-static TaskHandle_t TaskHandle = NULL;
-void task(void *pvParameters){
-	
+static TaskHandle_t TaskHandle_LED = NULL;
+void task_led(void *pvParameters){
 	while(1){
 		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
-		HAL_Delay(100);
-		printf("Characters: %c %c\n", 'a', 65);
+		vTaskDelay(400);
 	}
+	vTaskDelete(NULL);
 }
+static TaskHandle_t TaskHandle_UART = NULL;
+void task_uart(void *pvParameters){
+	while(1){
+		printf("Characters: %c %c\n", 'a', 65);
+		vTaskDelay(200);
+	}
+	vTaskDelete(NULL);
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -107,12 +115,18 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-	xTaskCreate(task,
+	xTaskCreate(task_led,
 								"Task",
-								128,
+								150,
+								NULL,
+								3,
+								&TaskHandle_LED);
+	xTaskCreate(task_uart,
+								"Task_2",
+								150,
 								NULL,
 								4,
-								&TaskHandle);
+								&TaskHandle_UART);
 	vTaskStartScheduler();
   /* USER CODE END 2 */
 
@@ -172,6 +186,27 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM4 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM4) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

@@ -24,4 +24,6 @@ stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_F
 stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 stm32f103\stm32f1xx_hal_exti.o: C:/Users/w0x7ce/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.4/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
