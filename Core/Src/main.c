@@ -68,11 +68,19 @@ PUTCHAR_PROTOTYPE
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 static TaskHandle_t TaskHandle = NULL;
-void task(void *pvParameters){
+void task_led(void *pvParameters){
 	
 	while(1){
 		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
-		HAL_Delay(100);
+		vTaskDelay(300);
+
+	}
+}
+
+void task_uart(void *pvParameters){
+	
+	while(1){
+		vTaskDelay(300);
 		printf("Characters: %c %c\n", 'a', 65);
 	}
 }
@@ -108,8 +116,15 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-	xTaskCreate(task,
-								"Task",
+	xTaskCreate(task_led,
+								"Task Blink",
+								128,
+								NULL,
+								4,
+								&TaskHandle);
+								
+	xTaskCreate(task_uart,
+								"Task UART",
 								128,
 								NULL,
 								4,
